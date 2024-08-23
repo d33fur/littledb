@@ -1,0 +1,10 @@
+{
+  "server": {
+      "ip": "127.0.0.1",
+      "port": 6378
+  },
+  "database": {
+      "file": "/var/lib/littledb/data.db",
+      "backup_file": "/var/lib/littledb/data_backup.db"
+  }
+}

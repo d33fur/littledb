@@ -1,0 +1,15 @@
+[Unit]
+Description=LittleDB Server
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/littledb-server
+Restart=always
+User=nobody
+Group=nogroup
+Environment=RUST_LOG=info
+WorkingDirectory=/usr/local/bin
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

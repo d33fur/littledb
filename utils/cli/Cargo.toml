@@ -1,0 +1,12 @@
+[package]
+name = "littledb-cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "littledb-cli"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+rustyline = "11.0.0"
