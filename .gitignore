@@ -4,12 +4,11 @@ python
 rust
 build
 temp
-utils/tmp-service.txt
+tmp-service.txt
 zig
 docker.txt
 Cargo.lock
 target
-bin
 .vscode
 trash
-benchmark
+benchmark.md

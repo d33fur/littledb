@@ -1,10 +1,42 @@
 {
   "server": {
       "ip": "127.0.0.1",
-      "port": 6378
+      "port": 6378,
+      "max_connections": 100,
+      "connection_timeout": 30,
+      "logging": "INFO"
   },
   "database": {
       "file": "/var/lib/littledb/data.db",
-      "backup_file": "/var/lib/littledb/data_backup.db"
+      "backup_file": "/var/lib/littledb/data_backup.db",
+      "max_db_size": "1GB",
+      "storage_type": "disk",
+      "cache_size": "64MB",
+      "journal_mode": "WAL"
+  },
+  "security": {
+      "auth": {
+        "enabled": true,
+        "users": {
+          "admin": "password123",
+          "guest": "guestpass"
+        }
+      },
+      "encryption": {
+        "enabled": true,
+        "encryption_key": "your-secret-key"
+      }
+  },
+  "backup": {
+    "backup_interval": "24h",
+    "auto_recovery": true
+  },
+  "logging": {
+    "log_file": "/var/log/littledb/server.log",
+    "log_level": "INFO"
+  },
+  "monitoring": {
+    "enabled": true,
+    "endpoint": "/metrics"
   }
 }
